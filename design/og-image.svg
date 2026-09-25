@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <!-- Link-preview image (LinkedIn, Slack, iMessage). Built by design/build-assets.sh,
-       which puts the logo where the LOGO comment is. -->
+       which puts the logo where the LOGO comment is. Previews are shown at ~500px wide
+       and recompressed, so keep everything large and heavy. -->
   <rect width="1200" height="630" fill="#ffffff"/>
-  <rect width="1200" height="12" fill="#b3161b"/>
-  <!--LOGO x="200" y="195" width="800" height="149"-->
-  <text x="600" y="425" text-anchor="middle" font-family="Helvetica Neue" font-size="36" fill="#5c5552">Computational Biology &amp; Immunology Consulting</text>
+  <rect width="1200" height="16" fill="#b3161b"/>
+  <!--LOGO x="100" y="165" width="1000" height="186"-->
+  <text x="600" y="452" text-anchor="middle" font-family="Helvetica Neue" font-weight="500" font-size="46" fill="#3a3533">Computational Biology &amp; Immunology Consulting</text>
 </svg>
