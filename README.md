@@ -35,8 +35,6 @@ If you change the "DM" lettering, update `design/favicon-source.svg` too.
 2. To preview, double-click `index.html` to open it in a browser.
 3. Commit and push. GitHub Pages redeploys within about a minute.
 
-Before launch, fill in the two `TODO` links (LinkedIn and Google Scholar) in the Contact section. You can also delete the Scholar line.
-
 ## Deploying to GitHub Pages (one-time setup)
 
 1. On GitHub, create a new **public** repo, for example `dmbioscience`. On a free account, Pages requires a public repo.
