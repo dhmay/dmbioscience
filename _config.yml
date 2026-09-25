@@ -1,0 +1,4 @@
+# GitHub Pages: don't publish the logo working files or the README.
+exclude:
+  - design
+  - README.md

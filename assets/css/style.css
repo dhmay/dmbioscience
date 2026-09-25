@@ -1,0 +1,122 @@
+/* DM Bioscience: simple, readable, no dependencies. */
+
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f7f5f4;        /* faint warm off-white for alternating sections */
+  --text: #1a1a1a;          /* logo black */
+  --muted: #5c5552;         /* warm gray */
+  --accent: #b3161b;        /* DM red, same as the logo */
+  --accent-hover: #8c1015;
+  --border: #e4e0de;
+  --max: 64rem;
+  --narrow: 42rem;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Body links stay black with a red underline, so red text isn't everywhere. */
+a {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--accent); }
+a:focus-visible, .button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 { line-height: 1.25; margin: 0 0 0.75rem; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.75rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.1rem; }
+p { margin: 0 0 1rem; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+.wrap.narrow { max-width: var(--narrow); }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--accent); color: #fff; padding: 0.5rem 1rem; z-index: 10;
+}
+.skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+/* Header */
+.site-header {
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky; top: 0; z-index: 5;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem 1.5rem;
+  padding-top: 0.9rem; padding-bottom: 0.9rem;
+}
+.logo { display: block; line-height: 0; }
+.logo img { display: block; height: 36px; width: auto; }
+
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; }
+nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+nav a:hover { color: var(--accent); }
+
+/* Sections */
+section { padding: 4rem 0; scroll-margin-top: 4rem; }
+section:nth-of-type(even) { background: var(--bg-alt); }
+
+.hero { padding: 5rem 0 4rem; }
+.lede { font-size: 1.2rem; color: var(--muted); max-width: 44rem; }
+
+.button {
+  display: inline-block; margin-top: 0.5rem;
+  background: var(--accent); color: var(--bg);
+  padding: 0.7rem 1.4rem; border-radius: 6px;
+  text-decoration: none; font-weight: 600;
+}
+.button:hover { background: var(--accent-hover); color: var(--bg); }
+
+.cards {
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+.card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.5rem;
+}
+.card p { margin: 0; color: var(--muted); }
+.note { margin-top: 1.75rem; color: var(--muted); }
+
+.sub { margin-top: 2rem; }
+ul.plain { padding-left: 1.2rem; margin: 0; }
+
+ul.links { list-style: none; padding: 0; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0; color: var(--muted); font-size: 0.9rem;
+}
+.site-footer p { margin: 0; }
+
+@media (max-width: 36rem) {
+  section { padding: 3rem 0; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .site-header { position: static; }
+  .logo img { height: 30px; }
+}

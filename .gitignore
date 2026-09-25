@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code local settings (dev-server config, permissions)
+.claude/
+
+# Jekyll build output, if you ever preview with Jekyll locally
+_site/
+.jekyll-cache/
